@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "3f79b2ac-5c43-4647-b19b-d501ee506ebb",
+		"name": "tech-test-payment-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "venda",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 1,\r\n    \"Data\": \"2023-01-29T19:31:00\",\r\n    \"Vendedor\": {\r\n        \"Id\": 1,\r\n        \"Cpf\":\"123.025.045-56\",\r\n        \"Nome\": \"Edmilson\",\r\n        \"Email\": \"ed.milson@milmil.com\",\r\n        \"Telefone\": \"1234-5678\"\r\n    },\r\n    \"Itens\": [\r\n        {\r\n            \"Id\": 1,\r\n            \"Nome\": \"Pasta de Dente\"\r\n        },\r\n        {\r\n            \"Id\": 2,\r\n            \"Nome\": \"Escova de Dente\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44357/venda",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44357",
+					"path": [
+						"venda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vendas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44357/venda",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44357",
+					"path": [
+						"venda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "venda (id)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44357/venda/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44357",
+					"path": [
+						"venda",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "venda (id) Not Found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44357/venda/999",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44357",
+					"path": [
+						"venda",
+						"999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "venda",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\": 1,\r\n    \"Data\": \"2023-01-29T19:31:00\",\r\n    \"Vendedor\": {\r\n        \"Id\": 1,\r\n        \"Cpf\":\"123.025.045-56\",\r\n        \"Nome\": \"Edmilson\",\r\n        \"Email\": \"ed.milson@milmil.com\",\r\n        \"Telefone\": \"1234-5678\"\r\n    },\r\n    \"Itens\": [\r\n        {\r\n            \"Id\": 1,\r\n            \"Nome\": \"Pasta de Dente\"\r\n        },\r\n        {\r\n            \"Id\": 2,\r\n            \"Nome\": \"Escova de Dente\"\r\n        }\r\n    ],\r\n    \"Status\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44357/venda",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44357",
+					"path": [
+						"venda"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
